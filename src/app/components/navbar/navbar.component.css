@@ -1,0 +1,9 @@
+.logo{
+    padding: 15px!important;
+}
+
+.logo img{
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+}

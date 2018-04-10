@@ -1,0 +1,28 @@
+.portfolio{
+    margin-top: -80px;
+    margin-bottom: 80px;
+    z-index: 9999;
+    background: #fff;
+}
+
+.portfolio .content{
+    z-index: 9999;
+    background: #eeeeee;
+}
+
+.project{
+    position: relative;
+    padding: 0!important;
+    cursor: pointer;
+}
+
+.project .overlay{
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background: rgba(0,0,0,.3);
+    display: none;
+}
+
+.project:hover .overlay{
+    display: block;
+}

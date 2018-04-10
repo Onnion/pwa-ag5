@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark');
+
+#header{
+    height: 95vh;
+    position: relative;
+}
+
+.container-row,
+#cover, #background-header{
+    height: 100%;
+}
+
+#cover {
+    background: -webkit-radial-gradient(left top , circle cover , rgb(12, 180, 206) , rgb(0, 108, 255) 100%);
+    opacity: .9;
+}
+
+#background-header{
+    background-image: url(https://cdn-undsgndotcom.netdna-ssl.com/uncode/wp-content/uploads/2014/10/photo-1435224654926-ecc9f7fa028c-modified-uai-1440x800.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.row-25{
+    height: 25%;
+}
+.row-50{
+    height: 50%;
+    vertical-align: middle;
+    padding: 30px;
+}
+
+#title{
+    opacity: 1!important;
+    font-size: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+
+a.btn-to{
+    text-transform: uppercase;
+    font-family: 'Palanquin Dark', sans-serif;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 25px;
+    opacity: 1;
+    font-size: 12px;
+    padding: 10px 30px;
+
+}
+
+a.btn-to:hover{
+    background: #fff;
+
+}

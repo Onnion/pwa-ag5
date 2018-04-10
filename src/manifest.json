@@ -1,0 +1,41 @@
+{
+    "name": "Siri Digital",
+    "short_name": "SiriDigital",
+    "description": "A funny cat image generator",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#50a18e",
+    "theme_color": "#3d806e",
+    "dir": "ltr",
+    "lang": "pt-BR",
+    "icons":[
+      {
+        "src": "assets/images/icons/Icon-36.png",
+        "sizes": "36x36"
+      },
+      {
+        "src": "assets/images/icons/Icon-48.png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "assets/images/icons/Icon-72.png",
+        "sizes": "72x72"
+      },
+      {
+        "src": "assets/images/icons/Icon-96.png",
+        "sizes": "96x96 128X128"
+      },
+      {
+        "src": "assets/images/icons/Icon-144.png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "assets/images/icons/Icon-192.png",
+        "sizes": "192x192 256x256"
+      },
+      {
+        "src": "assets/images/icons/Icon-512.png",
+        "sizes": "512x512"
+      }
+    ]
+  }
