@@ -5,6 +5,8 @@ import { AppComponent        } from './app.component';
 import { environment         } from '../environments/environment';
 import { routing             } from './app.routing';
 import { APP_BASE_HREF       } from '@angular/common';
+import { HttpClientModule    } from '@angular/common/http';
+import { FormsModule         } from '@angular/forms';
 
 // COMPONENTS
 import { HeaderComponent      } from './components/header/header.component';
@@ -17,7 +19,8 @@ import { ContactComponent     } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 
 // LIBS
-import { SlickModule } from 'ngx-slick';
+import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
+import { ProjectComponent } from './components/project/project.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { SlickModule } from 'ngx-slick';
     NavbarComponent,
     PortfolioComponent,
     TechnologysComponent,
-    ContactComponent
+    ContactComponent,
+    ScrollTopComponent,
+    ProjectComponent
   ],
   imports: [
     routing,
     BrowserModule,
-    SlickModule.forRoot(),
+    HttpClientModule,
+    FormsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [

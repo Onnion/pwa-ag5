@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark');
 
 #header{
-    height: 95vh;
+    height: 75vh;
     position: relative;
 }
 
@@ -11,7 +11,7 @@
 }
 
 #cover {
-    background: -webkit-radial-gradient(left top , circle cover , rgb(12, 180, 206) , rgb(0, 108, 255) 100%);
+    background: -webkit-radial-gradient(left top , circle farthest-corner , rgb(12, 180, 206) , rgb(0, 108, 255) 100%);
     opacity: .9;
 }
 
@@ -54,4 +54,16 @@ a.btn-to{
 a.btn-to:hover{
     background: #fff;
 
+}
+
+#curveDownColor {
+    position: absolute;
+    bottom: 0;
+    fill: #ffffff;
+}
+
+@media(max-width: 575px) {
+    #title{
+        font-size: 35px;
+    }
 }

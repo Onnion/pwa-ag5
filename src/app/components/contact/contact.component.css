@@ -1,0 +1,44 @@
+.contact-form {
+    background: #fff;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.contact-form label {
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.btn-round,
+.btn-round:focus,
+.btn-round::selection   {    
+    color: #fff!important;
+    border-radius: 25px; 
+    padding: 10px 25px;
+    background:  rgb(12, 180, 206);
+    border: transparent;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.281);
+    margin-top: 50px;
+}       
+
+.btn-round:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 17px rgba(12, 180, 206, 0.281);
+}
+
+.btn-round.disabled:hover {
+    transform: translateY(0);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.281);
+}
+
+#the-canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }

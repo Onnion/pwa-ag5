@@ -12,13 +12,7 @@ export class PortfolioComponent implements OnInit {
   public projects = [
     {"alt": "flaviosiqueiraadv", "src": "assets/images/projects/flaviosiqueiraadv.png", "href":"http://flaviosiqueiraadv.com.br"},
     {"alt": "vestibularcidadao", "src": "assets/images/projects/vestibular_cidadao.png", "href":"https://vestibularcidadao.com.br"}
-
   ]
-  
-  navigateBlank (href: string) {
-    const win = window.open(href, '_blank');
-    win.focus();
-  }
 
   ngOnInit () {
   }

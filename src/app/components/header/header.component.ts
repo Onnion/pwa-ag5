@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+
   constructor() { }
 
-  ngOnInit() {
-  }
+
+  ngOnInit() { }
+
+
+  navScroll(path) {
+
+    const targ = <HTMLElement>document.querySelector('#' + path);
+    targ.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  };
+
 
 }
