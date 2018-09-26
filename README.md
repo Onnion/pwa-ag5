@@ -1,27 +1,29 @@
-# Siri
+![alt tag](http://ctnovatec.com.br/wp-content/uploads/2015/03/nodejs-logo.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+## Installation process
 
-## Development server
+To get started, you can simply clone this repository and install the dependencies:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Prerequisites
 
-## Code scaffolding
+#### 1. Gulp
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+install `gulp` for build a compile files
+```
+sudo apt-get gulp
+```
 
-## Build
+#### 2. Http-server
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+install `http-server` for serve files
+```
+ npm install http-server -g
+```
 
-## Running unit tests
+### Install dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+We get the tools we depend upon via `npm`. And install 
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+npm install
+```
