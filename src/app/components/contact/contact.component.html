@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12 contact-form">
 
-            <form class="form">
+            <form class="form" [formGroup]="form" (submit)="sendMail()">
               <div class="row">
                   <div class="col-md-6">
                       <label>Nome</label>
@@ -13,7 +13,7 @@
                           <span class="input-group-addon">
                               <i class="nc-icon nc-single-02"></i>
                           </span>
-                          <input [(ngModel)]="contact_form.name" name="name" type="text" class="form-control" placeholder="Nome">
+                          <input formControlName="name" name="name" type="text" class="form-control" placeholder="Nome">
                       </div>
                   </div>
                   <div class="col-md-6">
@@ -22,7 +22,7 @@
                           <span class="input-group-addon">
                               <i class="nc-icon nc-tag-content"></i>
                           </span>
-                          <input [(ngModel)]="contact_form.subject" name="subject" type="text" class="form-control" placeholder="Assunto">
+                          <input formControlName="subject" name="subject" type="text" class="form-control" placeholder="Assunto">
                       </div>
                   </div>
                   <div class="col-md-12">
@@ -31,19 +31,21 @@
                           <span class="input-group-addon">
                               <i class="nc-icon nc-email-85"></i>
                           </span>
-                          <input [(ngModel)]="contact_form.email" name="email" type="text" class="form-control" placeholder="Email">
+                          <input formControlName="email" name="email" type="text" class="form-control" placeholder="Email">
                       </div>
                   </div>
               </div>
               <label>Menssagem</label>
-              <textarea [(ngModel)]="contact_form.message" name="message" class="form-control" style="resize: none;" rows="4" placeholder="Digite sua mensagem ou dúvida"></textarea>
+              <textarea formControlName="message" name="message" class="form-control" style="resize: none;" rows="4" placeholder="Digite sua mensagem ou dúvida"></textarea>
               <div class="row">
                   <div class="col-md-12 text-center">
 
-                      <button (click)="sendMail()" *ngIf="status_email.pre_send" class="btn btn-danger btn-round">Enviar</button>
-                      <button *ngIf="status_email.sending" class="btn btn-danger disabled btn-round">Enviando...</button>
-                      <button (click)="sendMail()" *ngIf="status_email.error_send" class="btn animated shake btn-danger btn-round">Enviar</button>
-                      <button *ngIf="status_email.send" class="btn btn-success disabled btn-round">Enviado</button>
+                      <button 
+                        [disabled]="status_email.sending || status_email.send" 
+                        [ngClass]="{'btn-success': status_email.send, 'btn-danger': !status_email.send}"
+                        class="btn btn-round">
+                        {{getBtnLabel()}}
+                    </button>
 
                   </div>
               </div>

@@ -1,0 +1,9 @@
+<!-- You can use owl-carousel selector to include its component -->
+<owl-carousel
+    [options]="{items: 3, dots: false, navigation: false}"
+    [items]="technologys"
+    [carouselClasses]="['owl-theme', 'row', 'sliding']">
+    <div class="item" *ngFor="let technology of technologys; let i = index">
+        <div class="thumbnail-image" ></div>
+    </div>
+</owl-carousel>

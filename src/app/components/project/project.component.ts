@@ -7,9 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  @Input('project') project: any;
-  @Input('delay') delay: any;
-
+  @Input() project: any;
 
   constructor() { }
 

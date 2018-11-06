@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../../services/contact.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,47 +11,70 @@ import { ContactService } from '../../services/contact.service';
 
 export class ContactComponent implements OnInit {
 
-  public contact_form = {
-    'name': null,
-    'subject': null,
-    'message': null,
-    'email': null
-  }
-
+  public form: FormGroup;
 
   public status_email = {
     'send': null,
     'sending': null,
     'error_send': null,
     'pre_send': true
+  };
+
+
+  constructor(
+    private contact: ContactService,
+    private fb: FormBuilder
+  ) { }
+
+
+  private initFormControls(): void {
+    this.form = this.fb.group({
+      name: ['', [Validators.required]],
+      subject: ['', [Validators.required]],
+      message: ['', [Validators.required]],
+      email: ['', [Validators.required]]
+    });
   }
 
 
-  constructor(private contact: ContactService) { }
+  public getBtnLabel(): string {
+    let result = 'Enviar';
+
+    if (this.status_email.sending) {
+      result = 'Enviando...';
+
+    } else if (this.status_email.error_send) {
+      result = 'Enviar';
+
+    } else if (this.status_email.send) {
+      result = 'Enviado';
+
+    }
+
+    return result;
+  }
 
 
-  ngOnInit() { }
+  private createObject(): any {
+
+  }
 
 
   sendMail() {
 
-    if (
-      this.contact_form.email && this.contact_form.name &&
-      this.contact_form.message && this.contact_form.subject) {
+    if (this.form.valid) {
 
       this.status_email.pre_send = false;
       this.status_email.sending = true;
 
-      this.contact.send(this.contact_form)
-        .subscribe(res => {
-
+      this.contact.send(this.createObject()).subscribe(
+        (contact) => {
           this.status_email.sending = false;
           this.status_email.send = true;
-          this.contact_form.email = null;
-          this.contact_form.name = null;
-          this.contact_form.subject = null;
-          this.contact_form.message = null;
 
+        },
+        (error) => {
+          console.log(error);
         });
 
     } else {
@@ -63,12 +87,18 @@ export class ContactComponent implements OnInit {
         this.status_email.pre_send = true;
         this.status_email.error_send = false;
 
-      }, 1000)
+      }, 1000);
     }
 
 
 
   }
+
+
+  ngOnInit() {
+
+    this.initFormControls();
+   }
 
 
 }
