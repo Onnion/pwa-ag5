@@ -29,7 +29,11 @@
     transition: .3s all;
 }
 
-
+@media(max-width:800px) {
+    .portfolio{
+        margin-top: 0px;
+    }
+}
 @media(max-width: 575px) {
     .portfolio{
         margin-bottom: 0;
