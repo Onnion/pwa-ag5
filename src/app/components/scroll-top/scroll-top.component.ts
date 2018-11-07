@@ -6,7 +6,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./scroll-top.component.css']
 })
 export class ScrollTopComponent implements OnInit {
-  
+
   public scrollVerify: boolean;
 
 
@@ -16,15 +16,15 @@ export class ScrollTopComponent implements OnInit {
   ngOnInit() { }
 
 
-scrolltoTop() {
+  scrolltoTop() {
 
-  const scrollToTop = window.setInterval(() => {
+    const scrollToTop = window.setInterval(() => {
 
-    const pos = window.pageYOffset;
-    pos > 0 ? window.scrollTo(0, pos - 20) : window.clearInterval(scrollToTop);
-    
-  }, 5);
-};
+      const pos = window.pageYOffset;
+      pos > 0 ? window.scrollTo(0, pos - 20) : window.clearInterval(scrollToTop);
+
+    }, 5);
+  }
 
 
   @HostListener('window:scroll', [])
