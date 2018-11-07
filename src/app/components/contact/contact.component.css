@@ -78,36 +78,23 @@ h1 {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.281);
 }
 
-#the-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
 .send {
     font-weight: 900;
     cursor: pointer;
 }
 
-.send:hover .arrow {
-    opacity: 1;
-    margin-left: 20px;
-    transition: .3s all;
-}
-
 
 .arrow {
   width: 16px;
+  margin-left: 20px;
   height: 16px;
-  border-top: 2px solid red;
-  border-right: 2px solid red;
+  border-top: 2px solid rgb(0, 108, 255);
+  border-right: 2px solid rgb(0, 108, 255);
   transform: rotate(45deg);
   border-radius: 7%;
   position: relative;
   display: inline-block;
-  opacity: 0;
+  opacity: 1;
   transition: .3s all;
 
 }
@@ -122,5 +109,15 @@ h1 {
     position: absolute;
     top: -4px;
     left: 5px;
-    background: red;
+    background: rgb(0, 108, 255);
+}
+
+.hidden {
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .submit-container {
+    margin-bottom: 20px;
+  }
 }

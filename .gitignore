@@ -5,6 +5,7 @@
 /dist-server
 /tmp
 /out-tsc
+gulp/
 
 # dependencies
 /node_modules

@@ -3,12 +3,6 @@
     <div id="contact" class="col-md-12">
       <div class="contact-form">
 
-        <div class="row">
-          <div class="col-md-12">
-            <h1>ENTRE EM CONTATO</h1>
-          </div>          
-        </div>
-
         <form class="form" [formGroup]="form" (submit)="sendMail()">
           <div class="row">
             <div class="col-md-12">
@@ -38,9 +32,11 @@
 
 
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 submit-container">
 
-              <span class="send">Enviar mensagem <span class="arrow"></span></span> 
+              <button type="submit" id="submit" class="hidden"></button>
+
+              <span (click)="submit()" class="send">Enviar mensagem <span class="arrow"></span></span> 
               <!-- <button [disabled]="status_email.sending || status_email.send" [ngClass]="{'btn-success': status_email.send, 'btn-danger': !status_email.send}"
                 class="btn btn-round">
                 {{getBtnLabel()}}
@@ -49,6 +45,8 @@
             </div>
           </div>
         </form>
+
+        <app-contact-footer (contact)="submit()" [mousePos]="mousePos"></app-contact-footer>
 
       </div>
     </div>

@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderNewComponent } from './header-new/header-new.component';
 import { MaterialModule } from '../app.material.module';
 import { PreLoadComponent } from './pre-load/pre-load.component';
+import { ContactFooterComponent } from './contact-footer/contact-footer.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { PreLoadComponent } from './pre-load/pre-load.component';
     ProjectComponent,
     FooterComponent,
     HeaderNewComponent,
-    PreLoadComponent
+    PreLoadComponent,
+    ContactFooterComponent
   ],
   exports: [
     AppComponent,

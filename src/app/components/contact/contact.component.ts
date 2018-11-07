@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ContactService } from '../../services/contact.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -12,7 +12,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   public form: FormGroup;
-
+  public mousePos: any;
   public status_email = {
     'send': null,
     'sending': null,
@@ -25,6 +25,13 @@ export class ContactComponent implements OnInit {
     private contact: ContactService,
     private fb: FormBuilder
   ) { }
+
+
+  @HostListener('mousemove', ['$event'])
+  onMousemove(event: MouseEvent) {
+    this.mousePos = { x: event.pageX, y: event.pageY };
+  }
+
 
 
   private initFormControls(): void {
@@ -52,6 +59,11 @@ export class ContactComponent implements OnInit {
     }
 
     return result;
+  }
+
+
+  public submit(): void {
+    document.getElementById('submit').click();
   }
 
 
