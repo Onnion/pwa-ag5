@@ -1,0 +1,11 @@
+footer {
+  background: #222222;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+footer span {
+  color: #FFFFFF;
+}

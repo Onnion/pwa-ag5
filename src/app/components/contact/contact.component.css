@@ -1,44 +1,126 @@
+#contact {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  /* background: #1e1e1f; */
+  justify-content: center;
+
+  background: url('assets/images/biel-morro-326858-unsplash.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#contact::before {
+  background-color: rgb(12, 180, 206);
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#contact::after {
+  background-color: rgb(0, 108, 255);
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: lighten;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  font-weight: 900;
+  font-family: 'Rubik Mono One', sans-serif;
+  background: rgb(0, 108, 255);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .contact-form {
-    background: #fff;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    padding: 50px;
+  background: #fff;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  padding: 50px;
+  z-index: 99;
 }
 
 .contact-form label {
-    margin-top: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 13px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
 }
 
 .btn-round,
 .btn-round:focus,
-.btn-round::selection   {    
-    color: #fff!important;
-    border-radius: 25px; 
-    padding: 10px 25px;
-    background:  rgb(12, 180, 206);
-    border: transparent;
-    transition: all 0.3s ease 0s;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.281);
-    margin-top: 50px;
-}       
+.btn-round::selection {
+  color: #fff !important;
+  border-radius: 25px;
+  padding: 10px 25px;
+  background: rgb(12, 180, 206);
+  border: transparent;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.281);
+}
 
-.btn-round:hover{
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 17px rgba(12, 180, 206, 0.281);
+.btn-round:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 17px rgba(12, 180, 206, 0.281);
 }
 
 .btn-round.disabled:hover {
-    transform: translateY(0);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.281);
+  transform: translateY(0);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.281);
 }
 
-#the-canvas{
+#the-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.send {
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.send:hover .arrow {
+    opacity: 1;
+    margin-left: 20px;
+    transition: .3s all;
+}
+
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid red;
+  border-right: 2px solid red;
+  transform: rotate(45deg);
+  border-radius: 7%;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  transition: .3s all;
+
+}
+
+.arrow:before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 24px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-  }
+    top: -4px;
+    left: 5px;
+    background: red;
+}

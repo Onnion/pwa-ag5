@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --main-background: -webkit-radial-gradient(left top , circle farthest-corner , rgb(12, 180, 206) , rgb(0, 108, 255) 100%);
+    --main-color: rgb(0, 108, 255);
+
+}
+
+.mat-form-field {
+    width: 100%!important;
+}
+
 body, html {
     margin: 0!important;
     padding: 0!important;
