@@ -1,4 +1,4 @@
-import { EMAIL_REGEX, NAME_REGEX } from '../../helpers/consts/consts.helpers';
+import { EMAIL_REGEX, NAME_REGEX } from '../../consts/consts.helpers';
 
 
 export const validEmail = (email: string): boolean => {
